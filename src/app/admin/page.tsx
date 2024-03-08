@@ -14,7 +14,7 @@ const Admin = () => {
   const truthPass = "mohamed2005";
   const totalPath = truthEmail + truthPass;
 
-  const handleForm = (event) => {
+  const handleForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (email === truthEmail && password === truthPass) {
       router.push(`/admin/${totalPath}`)

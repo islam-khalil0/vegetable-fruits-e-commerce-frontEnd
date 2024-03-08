@@ -9,17 +9,18 @@ const page = () => {
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState<null | File>(null);
   const [loading, setLoading] = useState(false);
 
   const { fruitsList, fetchDataOfFruits } = useProductsContext();
 
-  const handleFileChange = (event) => {
-    setFile(event.target.files[0]);
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFile(event.target.files?.[0] ?? null);
   };
 
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
 
