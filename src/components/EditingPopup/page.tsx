@@ -34,7 +34,7 @@ const EditingPopup: React.FC<EditingPopupProps> = ({
         };
     }, [isEditingPopupVisible]);
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         const apiUrl = determineApiUrl(pathName, id);
