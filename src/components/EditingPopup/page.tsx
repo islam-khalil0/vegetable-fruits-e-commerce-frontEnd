@@ -88,7 +88,7 @@ const EditingPopup: React.FC<EditingPopupProps> = ({
                                 type="number"
                                 placeholder="اكتب السعر الجديد"
                                 value={upPrice}
-                                onChange={(e) => setUpPrice(e.target.value)}
+                                onChange={(e) => setUpPrice(parseFloat(e.target.value))}
                             />
                             <button type="submit">تعديل</button>
                         </form>
