@@ -12,10 +12,10 @@ const Admin = () => {
 
   const truthEmail = "mohamed@fkha.com";
   const truthPass = "mohamed2005";
-  const totalPath = truthEmail + truthPass ;
+  const totalPath = truthEmail + truthPass;
 
-  const handleForm = (e) => {
-    e.preventDefault();
+  const handleForm = (event) => {
+    event.preventDefault();
     if (email === truthEmail && password === truthPass) {
       router.push(`/admin/${totalPath}`)
     } else {
