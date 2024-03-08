@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 interface EditingPopupProps {
     isEditingPopupVisible: boolean;
     toggleEditingPopup: () => void;
-    id: number;
+    id: string;
     name: string;
     price: number;
 }
