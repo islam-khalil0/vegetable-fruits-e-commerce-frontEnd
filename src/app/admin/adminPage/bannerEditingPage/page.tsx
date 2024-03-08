@@ -6,6 +6,7 @@ import { useProductsContext } from '@/contexts/ProductsContext';
 import ProductCard from '@/components/ProductCard';
 import ImageCard from "@/components/ImageCard";
 
+
 const page = () => {
 
     const [file, setFile] = useState<null | File>(null);
@@ -23,6 +24,12 @@ const page = () => {
         setLoading(true);
 
         try {
+
+            if (file === null) {
+                console.error('File is null.');
+                return;
+            }
+
             const formData = new FormData();
             formData.append('file', file);
 

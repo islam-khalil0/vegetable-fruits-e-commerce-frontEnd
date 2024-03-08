@@ -25,6 +25,10 @@ const page = () => {
     setLoading(true);
 
     try {
+      if (file === null) {
+        console.error('File is null.');
+        return;
+      }
       const formData = new FormData();
       formData.append('name', name);
       formData.append('price', price);
