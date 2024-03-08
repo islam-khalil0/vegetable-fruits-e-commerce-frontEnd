@@ -59,7 +59,7 @@ const EditingPopup: React.FC<EditingPopupProps> = ({
         }
     };
 
-    const determineApiUrl = (path: string, itemId: number): string => {
+    const determineApiUrl = (path: string, itemId: string): string => {
         switch (path) {
             case '/admin/adminPage/vegetableEditingPage':
                 return `https://vegetable-e-commerce.onrender.com/updateVegetable/${itemId}`;
