@@ -5,6 +5,14 @@ import Styles from "./page.module.css"
 import { useProductsContext } from '@/contexts/ProductsContext';
 import ProductCard from '@/components/ProductCard';
 
+interface product {
+  name: string;
+  price: number;
+  _id: string;
+  imagePath: String;
+  imageName: String;
+}
+
 const page = () => {
 
   const [name, setName] = useState("");
@@ -78,7 +86,7 @@ const page = () => {
         <h1>الفواكه ال علي المنصة</h1>
         <div className={Styles.content}>
           {
-            fruitsList.map((item, index) => (
+            fruitsList.map((item: product, index: number) => (
               <ProductCard key={index} {...item} />
             ))
           }

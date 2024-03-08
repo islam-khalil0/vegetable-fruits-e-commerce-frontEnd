@@ -72,7 +72,7 @@ const page = () => {
                 <h1>الصور الموجودة في البانر</h1>
                 <div className={Styles.content}>
                     {
-                        bannerImagesList.map((item, index) => (
+                        bannerImagesList.map((item: { _id: string, imagePath: string, imageName: string }, index: number) => (
                             <ImageCard key={index} {...item} />
                         ))
                     }

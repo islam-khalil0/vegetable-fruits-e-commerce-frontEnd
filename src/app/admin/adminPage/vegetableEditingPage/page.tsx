@@ -5,6 +5,15 @@ import Styles from "./page.module.css";
 import { useProductsContext } from '@/contexts/ProductsContext';
 import ProductCard from '@/components/ProductCard';
 
+interface product {
+  name: string;
+  price: number;
+  _id: string;
+  imagePath: String;
+  imageName: String;
+}
+
+
 const Page = () => {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
@@ -71,7 +80,7 @@ const Page = () => {
       <div className={Styles.listOfProducts}>
         <h1>الخضروات ال علي المنصة</h1>
         <div className={Styles.content}>
-          {vegetablesList.map((item, index) => (
+          {vegetablesList.map((item: product, index: number) => (
             <ProductCard key={index} {...item} />
           ))}
         </div>

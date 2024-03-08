@@ -5,6 +5,15 @@ import Styles from "./page.module.css"
 import { useProductsContext } from '@/contexts/ProductsContext';
 import ProductCard from '@/components/ProductCard';
 
+interface product {
+  name: string;
+  price: number;
+  _id: string;
+  imagePath: String;
+  imageName: String;
+}
+
+
 const page = () => {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
@@ -26,7 +35,7 @@ const page = () => {
         console.error('File is null.');
         return;
       }
-      
+
       const formData = new FormData();
       formData.append('name', name);
       formData.append('price', price);
@@ -75,7 +84,7 @@ const page = () => {
         <h1>العروض والاصناف الجديده ال علي المنصة</h1>
         <div className={Styles.content}>
           {
-            offersList.map((item, index) => (
+            offersList.map((item: product, index: number) => (
               <ProductCard key={index} {...item} />
             ))
           }
