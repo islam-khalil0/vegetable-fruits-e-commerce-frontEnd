@@ -9,8 +9,8 @@ interface product {
   name: string;
   price: number;
   _id: string;
-  imagePath: String;
-  imageName: String;
+  imagePath: string;
+  imageName: string;
 }
 
 
