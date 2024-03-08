@@ -21,8 +21,18 @@ import 'swiper/css/navigation';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
+interface BannerImage {
+  imagePath: string;
+  imageName: string;
+}
 
-
+interface product {
+  name: string;
+  price: number;
+  _id: string;
+  imagePath: String;
+  imageName: String;
+}
 
 export default function Home() {
 
@@ -118,7 +128,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div className={Styles.imageSlider}>
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
@@ -131,27 +140,14 @@ export default function Home() {
             disableOnInteraction: false,
           }}
         >
-          {
-            bannerImagesList.map((item, index) => (
-              <SwiperSlide className={Styles.SwiperSlide} key={index}>
-                <Image src={item.imagePath} alt={item.imageName} width={1000} height={700} />
-              </SwiperSlide>
-            ))
-          }
+          {bannerImagesList.map((item: BannerImage, index: number) => (
+            <SwiperSlide className={Styles.SwiperSlide} key={index}>
+              <Image src={item.imagePath} alt={item.imageName} width={1000} height={700} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
 
-      {/* 
-      <div className={Styles.category}>
-        <h1>اصنافنا</h1>
-        <div className={Styles.content}>
-          {
-            categoryArray.map((item, index) => (
-              <CardCategory key={index} {...item} />
-            ))
-          }
-        </div>
-      </div> */}
 
       {/* vegetable section */}
       <div className={Styles.vegetables} id='vegetable'>
@@ -181,7 +177,7 @@ export default function Home() {
                 </div>
               </div>
             ) : (
-              vegetablesList.slice(0, 4).map((item, index) => (
+              vegetablesList.slice(0, 4).map((item: product, index: number) => (
                 <ProductCard key={index} {...item} />
               )))
           }
@@ -216,7 +212,7 @@ export default function Home() {
                 </div>
               </div>
             ) : (
-              fruitsList.slice(0, 4).map((item, index) => (
+              fruitsList.slice(0, 4).map((item: product, index: number) => (
                 <ProductCard key={index} {...item} />
               )))
           }
@@ -260,7 +256,7 @@ export default function Home() {
               </div>
             ) : (
 
-              offersList.slice(0, 4).map((item, index) => (
+              offersList.slice(0, 4).map((item: product, index: number) => (
                 <ProductCard key={index} {...item} />
               )))
           }
