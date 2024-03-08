@@ -1,0 +1,81 @@
+.container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 2rem;
+  width: 100%;
+}
+
+.container .ContainerForm {
+  width: 100%;
+  height: 40vh;
+}
+
+.container .ContainerForm h1 {
+  color: #07aa18;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.container .ContainerForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  align-items: start;
+  justify-content: start;
+}
+
+.container .ContainerForm form input {
+  width: 50%;
+  height: 2.2rem;
+  padding: 0.7rem;
+  border-radius: 5px;
+}
+
+.container .ContainerForm form button {
+  background: #07aa18;
+  width: 50%;
+  padding: 0.7rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.container .listOfProducts {
+  width: 100%;
+}
+
+.container .listOfProducts h1 {
+  color: #07aa18;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.container .listOfProducts .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 20px;
+  place-items: center;
+}
+
+
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 100%;
+  }
+  .container .ContainerForm form input {
+    width: 100%;
+  }
+
+  .container .ContainerForm form button {
+    width: 100%;
+  }
+  .container .ContainerForm {
+    height: max-content;
+    padding: 0.4rem 0;
+  }
+}

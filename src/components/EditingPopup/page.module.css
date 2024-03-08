@@ -1,0 +1,86 @@
+/* Popup.module.css */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.575);
+  backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupContent {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 50%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+.popupContent h2 {
+  font-size: 20px;
+}
+
+.popupContent p {
+  word-wrap: break-word;
+  white-space: pre-line;
+}
+.popupContent span {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 22px;
+  /* color: #07aa18; */
+  color: red;
+  cursor: pointer;
+  width: max-content;
+}
+
+.popupContent form {
+  margin: 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popupContent form input {
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 7px;
+}
+
+.popupContent form button {
+  margin-top: 1rem;
+  background: transparent;
+  background: transparent;
+  border: 1px solid #07aa18;
+  border-radius: 5px;
+  padding: 7px 50px;
+  transition: all ease 0.3s;
+}
+
+.popupContent form button:hover {
+  background: #07aa18;
+  border-color: #07aa18;
+  color: white;
+}
+
+@media screen and (max-width: 1100px) {
+  .popupContent {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .popupContent {
+    width: 90%;
+  }
+}

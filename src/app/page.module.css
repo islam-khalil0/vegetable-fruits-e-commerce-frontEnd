@@ -1,0 +1,391 @@
+.container {
+  width: 100%;
+}
+
+.container .icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2.8rem;
+  cursor: pointer;
+  color: green;
+  z-index: 10;
+}
+
+.container .heroSection {
+  background-image: url("../../public/hero-img2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.538);
+  background-blend-mode: overlay;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .heroSection .content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 3rem;
+}
+
+.container .heroSection .content h1 {
+  font-size: 7rem;
+  font-weight: bold;
+}
+
+.container .heroSection .content p {
+  font-size: 16px;
+  width: 70%;
+  text-wrap: balance;
+  line-height: auto;
+  word-break: keep-all;
+}
+
+.container button {
+  margin-top: 1rem;
+  background: transparent;
+  background: transparent;
+  border: 1px solid #07aa18;
+  border-radius: 5px;
+  padding: 7px 50px;
+  transition: all ease 0.3s;
+}
+
+.container button:hover {
+  background: #07aa18;
+  border-color: #07aa18;
+  color: white;
+}
+
+.container .infoSection {
+  padding: 4rem 2rem 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.container .infoSection .branchTree {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25rem;
+  opacity: 0.6;
+}
+
+.container .infoSection h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.container .infoSection .infoContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  gap: 5rem;
+}
+
+.container .infoSection .infoContainer .infoImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .infoSection .infoContainer .infoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.container .infoSection .infoContainer .infoContent h3 {
+  font-size: 1.7rem;
+  color: #07aa18;
+  font-weight: bold;
+}
+
+.container .infoSection .infoContainer .infoContent p {
+  text-wrap: balance;
+  line-height: 32px;
+  word-break: keep-all;
+  font-size: 18px;
+}
+
+.container .infoSection .infoContainer .infoContent small {
+  font-size: 15px;
+}
+
+.container .infoSection .infoContainer .infoContent .btnGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.container .imageSlider {
+  padding: 1rem;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container .imageSlider .SwiperSlide {
+  height: 28rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.container .imageSlider .SwiperSlide Image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.container .vegetables {
+  margin-top: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.container .vegetables h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 500;
+  color: #07aa18;
+}
+
+.container .vegetables .content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  place-items: center;
+}
+
+.container .fruits {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.container .fruits h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 500;
+  color: #07aa18;
+}
+
+.container .fruits .content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  place-items: center;
+}
+
+.container .viewSection {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  height: 70vh;
+}
+
+.container .viewSection .content {
+  width: 100%;
+  height: 100%;
+  background: #07aa18;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container .viewSection .content h1 {
+  width: 50%;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.container .viewSection .content p {
+  width: 80%;
+  color: white;
+  font-size: 18px;
+}
+
+.container .fixedImage {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.container .fixedImage .img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.container .offers {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.container .offers h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 500;
+  color: #07aa18;
+}
+
+.container .offers .content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  place-items: center;
+}
+
+/* loading */
+.spinnerContainer {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.spinner {
+  position: absolute;
+  width: calc(100% - 9.9px);
+  height: calc(100% - 9.9px);
+  border: 5px solid transparent;
+  border-radius: 50%;
+  border-top-color: #07aa18;
+  animation: spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.79) infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .container .infoSection .infoContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .container .viewSection .content h1 {
+    width: 90%;
+    font-size: 2rem;
+  }
+
+  .container .viewSection .content p {
+    width: 90%;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .container .vegetables .content {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+
+  .container .fruits .content {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+  .container .offers .content {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+
+  .container .heroSection .content h1 {
+    font-size: 5rem;
+  }
+
+  .container .heroSection .content p {
+    width: 90%;
+    font-size: 15px;
+  }
+
+  .container .infoSection .infoContainer .infoContent {
+    gap: 0.2rem;
+  }
+
+  .container .infoSection h1 {
+    font-size: 1.3rem;
+  }
+
+  .container .infoSection .infoContainer .infoContent .btnGroup {
+    flex-direction: column;
+  }
+  .container .infoSection .infoContainer .infoContent {
+    align-items: start;
+    justify-content: start;
+    gap: 0.5rem;
+  }
+
+  .container .infoSection .infoContainer .infoContent h3 {
+    font-size: 1.2rem;
+  }
+
+  .container .infoSection .infoContainer .infoContent p {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  .container .infoSection {
+    padding: 2rem;
+  }
+  .container .infoSection .branchTree {
+    width: 15rem;
+  }
+  .container .imageSlider .SwiperSlide {
+    height: 15rem;
+  }
+}

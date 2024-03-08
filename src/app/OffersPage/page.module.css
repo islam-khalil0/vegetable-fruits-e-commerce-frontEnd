@@ -1,0 +1,55 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+}
+
+.container h1 {
+  font-size: 27px;
+  color: #07aa18;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.container .contentContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  place-items: center;
+}
+
+/* loading */
+.spinnerContainer {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.spinner {
+  position: absolute;
+  width: calc(100% - 9.9px);
+  height: calc(100% - 9.9px);
+  border: 5px solid transparent;
+  border-radius: 50%;
+  border-top-color: #07aa18;
+  animation: spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.79) infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 1rem;
+  }
+}
