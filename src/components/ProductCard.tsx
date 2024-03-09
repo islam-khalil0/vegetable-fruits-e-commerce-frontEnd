@@ -69,10 +69,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, price, _id, imagePath, 
   }
   return (
     <div className='min-w-[20rem] max-w-[20rem] h-[26rem] flex flex-col items-center justify-start gap-2 bg-white overflow-hidden rounded truncate'>
-      <Image alt={imageName} src={imagePath} width={200} height={200} className='w-[100%] h-[60%] object-cover object-center' />
+      <Image alt={imageName} src={imagePath} width={200} height={200} className='w-[100%] h-[55%] object-cover object-center' />
       <div className='w-[100%] h-[40%] flex flex-col items-center justify-evenly'>
 
-        <h2 className='text-[#07aa18] text-2xl'>{name}</h2>
+        <h2 className='text-[#07aa18] text-2xl text-wrap text-center px-[2px]' style={{ wordWrap: 'break-word', whiteSpace: 'pre-line' }}>{name}</h2>
         <h3 className='text-xl'>
           {price} <span className='text-gray-700'>جنيه</span>
         </h3>

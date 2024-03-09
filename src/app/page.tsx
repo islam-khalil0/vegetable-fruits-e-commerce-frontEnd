@@ -10,6 +10,11 @@ import { FaWhatsapp } from "react-icons/fa";
 import { useProductsContext } from '@/contexts/ProductsContext'
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import ConfettiComponent from "@/components/confetti";
+import ramadanLight from "../../public/goldenMon.png"
+import ramadanBg from "../../public/ramadanBg2.png"
+import lightR from "../../public/lightR.png"
+
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -102,6 +107,11 @@ export default function Home() {
         </a>
       </div>
 
+      <ConfettiComponent />
+
+      <Image src={ramadanLight} alt='ramadan lights' width={200} height={200} className={Styles.goldenMon} />
+      <Image src={lightR} alt='ramadan lights' width={200} height={200} className={Styles.lightR} />
+
       <div className={Styles.heroSection}>
         <div className={Styles.content}>
           <h1>ال<span className='text-[#07aa18]'>فكه</span>اني</h1>
@@ -128,6 +138,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className={Styles.imageSlider}>
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
@@ -147,7 +158,6 @@ export default function Home() {
           ))}
         </Swiper>
       </div>
-
 
       {/* vegetable section */}
       <div className={Styles.vegetables} id='vegetable'>
@@ -221,6 +231,7 @@ export default function Home() {
 
       <div className={Styles.viewSection}>
         <div className={Styles.content}>
+          <Image src={ramadanBg} alt='ramadan lights' width={200} height={200} className={Styles.ramadanBg} />
           <h1>اطلب اليوم واستمتع بالطازجة كما لم تفعل من قبل!</h1>
           <p>
             احتفال بالنكهة والتغذية والاستدامة هل أنت مستعد للانطلاق في رحلة اللذة؟ تصفح موقعنا، املأ سلة التسوق الخاصة بك بخيرات الطبيعة، ودعنا نقدم لك الطازجة. في الفكهاني, كل لقمة هي احتفال بالنكهة والتغذية والاستدامة</p>
