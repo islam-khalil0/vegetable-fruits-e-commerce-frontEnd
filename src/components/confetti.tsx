@@ -1,12 +1,12 @@
-"use client";
-
 import React, { useEffect, useState } from 'react';
-import Confetti from 'react-confetti';
-import RamadanPopup from "@/components/ramadanPopUp/page"
+import dynamic from 'next/dynamic';
+
+const Confetti = dynamic(() => import('react-confetti'), { ssr: false });
+const RamadanPopup = dynamic(() => import('@/components/ramadanPopUp/page'));
 
 const ConfettiComponent = () => {
   const [isConfettiActive, setConfettiActive] = useState(false);
-  const [windowDem, setWindowDem] = useState({ width: window.innerWidth, height: window.innerHeight });
+  const [windowDem, setWindowDem] = useState({ width: 0, height: 0 });
   const [isPopupVisible, setPopupVisible] = useState(false);
 
   const detectSize = () => {
@@ -14,32 +14,37 @@ const ConfettiComponent = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('resize', detectSize);
-
-    return () => {
-      window.removeEventListener('resize', detectSize);
-    };
-  }, [windowDem]);
-
-  useEffect(() => {
-    const hasEffectRunBefore = localStorage.getItem('hasEffectRun');
-
-    if (!hasEffectRunBefore) {
-      setConfettiActive(true);
-
-      const confettiTimer = setTimeout(() => {
-        setConfettiActive(false);
-        localStorage.setItem('hasEffectRun', 'true');
-      }, 8000);
-
-      const popupTimer = setTimeout(() => {
-        setPopupVisible(true);
-      }, 500);
+    if (typeof window !== 'undefined') {
+      detectSize();
+      window.addEventListener('resize', detectSize);
 
       return () => {
-        clearTimeout(confettiTimer);
-        clearTimeout(popupTimer);
+        window.removeEventListener('resize', detectSize);
       };
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const hasEffectRunBefore = localStorage.getItem('hasEffectRun');
+
+      if (!hasEffectRunBefore) {
+        setConfettiActive(true);
+
+        const confettiTimer = setTimeout(() => {
+          setConfettiActive(false);
+          localStorage.setItem('hasEffectRun', 'true');
+        }, 8000);
+
+        const popupTimer = setTimeout(() => {
+          setPopupVisible(true);
+        }, 500);
+
+        return () => {
+          clearTimeout(confettiTimer);
+          clearTimeout(popupTimer);
+        };
+      }
     }
   }, []);
 
